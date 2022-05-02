@@ -24,8 +24,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           registry-url: 'https://npm.pkg.github.com'
+          scope: '@hairmare'
       - uses: go-semantic-release/action@v1
         id: semrel
+        if: github.ref == 'refs/heads/main'
         with:
           github-token: ${{ secrets.SEMREL_PAT }}
           allow-initial-development-versions: true
