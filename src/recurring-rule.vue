@@ -10,12 +10,6 @@
 		<span class="field-name">Frequency</span>
 		<v-select inline :model-value="freq" :items="props.freq_choices" :disabled="disabled" :show-deselect="allowNone"
 			:allow-other="allowOther" @update:model-value="freq = $event; handleChange()">
-			<template v-slot:prepend-outer>
-				<span class="field-name">T0</span>
-			</template>
-			<template v-slot:prepend>
-				<span class="field-name">T2</span>
-			</template>
 			<template v-if="props.freq_icon" #prepend>
 				<v-icon :name="props.freq_icon" />
 			</template>
