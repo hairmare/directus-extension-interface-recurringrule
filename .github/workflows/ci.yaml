@@ -27,7 +27,8 @@ jobs:
       - uses: go-semantic-release/action@v1
         id: semrel
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.SEMREL_PAT }}
+          allow-initial-development-versions: true
           update-file: package.json
           changelog-generator-opt: "emojis=true"
       - run: npm publish
