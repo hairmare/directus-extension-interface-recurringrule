@@ -44,7 +44,6 @@ type Option = {
 	value: string | number | boolean | Weekday;
 	children?: Option[];
 };
-type OptionPropType = PropType<Option>;
 
 interface Props {
 	// options
@@ -58,7 +57,7 @@ interface Props {
 	freq_icon?: string;
 	interval_icon?: string;
 	wkst?: Weekday;
-	byweekday?: number;
+	byweekday?: Array<Weekday>;
 	byweekday_choices: Array<Option>;
 	byweekday_icon?: string;
 }
