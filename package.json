@@ -13,6 +13,7 @@
 		"host": "^9.9.1"
 	},
 	"scripts": {
+		"test": "echo 'TODO: implement tests'; exit 0",
 		"build": "directus-extension build",
 		"build-watch": "directus-extension build --watch"
 	},
